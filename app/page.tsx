@@ -464,6 +464,20 @@ const StartScreen = ({
         >
           ← → Ok tuşları | Space: İleri | ESC: Çıkış
         </p>
+
+        <p 
+          className="credits"
+          style={{ 
+            opacity: mounted ? 1 : 0, 
+            transition: 'opacity 0.8s ease-out 2.0s',
+            fontSize: '0.9rem',
+            color: '#94a3b8',
+            marginTop: '1rem',
+            textAlign: 'center'
+          }}
+        >
+          Emir Sakarya ve Hasan Onur Kar tarafından yapılmıştır
+        </p>
       </div>
     </div>
   );
