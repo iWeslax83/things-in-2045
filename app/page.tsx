@@ -132,7 +132,6 @@ const slidesData: SlideData[] = [
     isClosing: true
   }
 ];
-
 // ============================================
 // WEB AUDIO API - SES SİSTEMİ
 // ============================================
@@ -142,8 +141,12 @@ const useSoundEffects = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const context = new (window.AudioContext || (window as any).webkitAudioContext)();
-      setAudioContext(context);
+      // 'any' yerine type assertion kullan
+      const AudioContextClass = window.AudioContext || (window as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      if (AudioContextClass) {
+        const context = new AudioContextClass();
+        setAudioContext(context);
+      }
     }
   }, []);
 
