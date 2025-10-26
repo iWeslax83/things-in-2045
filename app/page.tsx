@@ -1089,6 +1089,18 @@ export default function Home() {
             >
               <Settings className="w-6 h-6 text-white" />
             </button>
+
+            <button
+              onClick={() => {
+                setShowStart(true);
+                playClick();
+              }}
+              className="nav-button"
+              title="Ana Ekrana Dön (ESC)"
+              style={{ background: 'rgba(147, 51, 234, 0.8)' }}
+            >
+              <HomeIcon className="w-6 h-6 text-white" />
+            </button>
           </div>
 
           <div className="slide-indicators">
