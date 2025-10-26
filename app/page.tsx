@@ -623,7 +623,7 @@ const StartScreen = ({
           </button>
 
           <button
-            onClick={() => window.open('https://github.com', '_blank')}
+            onClick={() => window.open('https://github.com/iWeslax83/things-in-2045', '_blank')}
             className="github-button"
             style={{ 
               opacity: mounted ? 1 : 0, 
