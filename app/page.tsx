@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
-  Brain, Glasses, Globe, Zap, Users, Sparkles, 
-  ChevronLeft, ChevronRight, Maximize, X, Play, Pause, Volume2, VolumeX,
-  Download, Github, Code,
+  Key, Shield, Fingerprint, Cpu, Lock, Home as HomeIcon, Eye, Brain, 
+  Sparkles, ChevronLeft, ChevronRight, Maximize, X, Play, Pause, Volume2, VolumeX,
+  Download, Github, Code, Smartphone, Wifi, Database, Zap,
   LucideIcon
 } from 'lucide-react';
 
@@ -44,88 +44,88 @@ interface SlideProps {
 const slidesData: SlideData[] = [
   {
     id: 1,
-    title: "EĞİTİM 2045",
-    subtitle: "Geleceğin Öğrenme Deneyimi",
-    text: "Yapay zeka, sanal gerçeklik ve kişiselleştirilmiş öğrenme ile eğitimde yeni bir çağ başlıyor",
-    icon: Sparkles,
-    gradient: "from-cyan-600 via-blue-600 to-purple-700",
+    title: "EV ANAHTARI 2045",
+    subtitle: "Geleceğin Güvenlik Deneyimi",
+    text: "Biyometrik kimlik doğrulama, çip tabanlı erişim sistemleri ve yapay zeka ile ev güvenliğinde yeni bir çağ başlıyor",
+    icon: Key,
+    gradient: "from-slate-600 via-blue-600 to-indigo-700",
     transitionType: "slide"
   },
   {
     id: 2,
-    title: "Yapay Zeka Öğretmenler",
-    subtitle: "Her Öğrenci İçin Kişisel Mentor",
-    text: "24/7 erişilebilir, sınırsız sabırlı ve her öğrencinin öğrenme stiline uyum sağlayan AI öğretmenler",
-    icon: Brain,
-    gradient: "from-purple-600 via-pink-600 to-red-600",
+    title: "Biyometrik Kimlik Doğrulama",
+    subtitle: "Vücudunuz Anahtarınız",
+    text: "Parmak izi, yüz tanıma, iris tarama ve ses tanıma ile %99.9 doğruluk oranında güvenli erişim",
+    icon: Fingerprint,
+    gradient: "from-emerald-600 via-teal-600 to-cyan-600",
     transitionType: "fade",
     features: [
-      "Anlık geri bildirim ve adaptif müfredat",
-      "Duygusal zeka ile motivasyon desteği",
-      "50+ dilde eş zamanlı öğretim"
+      "0.3 saniyede anında tanıma",
+      "Çok faktörlü biyometrik doğrulama",
+      "Sahte parmak izi tespiti ve koruması"
     ]
   },
   {
     id: 3,
-    title: "Sanal Gerçeklik Sınıfları",
-    subtitle: "Sınırları Aşan Öğrenme",
-    text: "Mars'ta yürüyün, antik Roma'yı keşfedin, atom içinde gezinin - öğrenme artık sınırsız",
-    icon: Glasses,
-    gradient: "from-blue-600 via-cyan-600 to-teal-600",
+    title: "Çip Tabanlı Erişim Sistemleri",
+    subtitle: "Teknoloji Cebinizde",
+    text: "NFC, RFID ve implante edilebilir çiplerle temassız, güvenli ve pratik ev erişimi",
+    icon: Cpu,
+    gradient: "from-violet-600 via-purple-600 to-fuchsia-600",
     transitionType: "flip",
     features: [
-      "İmmersiv deneyimlerle %80 daha iyi öğrenme",
-      "Tehlikeli deneyleri güvenle gerçekleştirme",
-      "Tarihi olayları ilk elden yaşama"
+      "256-bit şifreleme ile maksimum güvenlik",
+      "10 yıl pil ömrü ve kurcalamaya karşı koruma",
+      "Akıllı telefon entegrasyonu"
     ]
   },
   {
     id: 4,
-    title: "Kişiselleştirilmiş Öğrenme",
-    subtitle: "Herkes Kendi Hızında",
-    text: "AI analizi ile her öğrencinin güçlü ve zayıf yönleri tespit edilir, özel öğrenme yolu oluşturulur",
-    icon: Zap,
+    title: "Yapay Zeka Destekli Güvenlik",
+    subtitle: "Öğrenen ve Adapte Olan Sistem",
+    text: "Davranış analizi, anomali tespiti ve öngörülü güvenlik ile 7/24 koruma",
+    icon: Brain,
     gradient: "from-orange-600 via-amber-600 to-yellow-600",
     transitionType: "zoom",
     features: [
-      "Gerçek zamanlı performans izleme",
-      "Dinamik zorluk ayarlaması",
-      "İlgi alanlarına özel içerik"
+      "Kullanıcı kalıplarını öğrenen algoritma",
+      "Gerçek zamanlı tehdit tespiti",
+      "Otomatik acil durum protokolleri"
     ]
   },
   {
     id: 5,
-    title: "Küresel Eğitim Ağları",
-    subtitle: "Dünya Vatandaşları Yetiştirme",
-    text: "Farklı kültürlerden öğrenciler sanal sınıflarda buluşuyor, küresel projeler üretiyor",
-    icon: Globe,
+    title: "Akıllı Ev Entegrasyonu",
+    subtitle: "Tek Dokunuşla Her Şey",
+    text: "Eve girdiğinizde ışıklar yanar, müzik başlar, sıcaklık ayarlanır - kişiselleştirilmiş deneyim",
+    icon: HomeIcon,
     gradient: "from-green-600 via-emerald-600 to-teal-600",
     transitionType: "slide",
     features: [
-      "7 kıtadan öğrencilerle ortak projeler",
-      "Kültürler arası anlayış ve empati",
-      "Gerçek dünya problemlerine çözümler"
+      "IoT cihazlarla tam entegrasyon",
+      "Kişiye özel ev ayarları",
+      "Enerji verimliliği optimizasyonu"
     ]
   },
   {
     id: 6,
-    title: "Artırılmış Gerçeklik Uygulamaları",
-    subtitle: "Fiziksel ve Dijital Dünyaların Birleşimi",
-    text: "AR gözlüklerle gerçek dünyaya dijital bilgi katmanları ekleniyor, öğrenme her yerde",
-    icon: Users,
-    gradient: "from-pink-600 via-rose-600 to-red-600",
+    title: "Gizlilik ve Veri Güvenliği",
+    subtitle: "Bilgileriniz Sadece Sizde",
+    text: "Yerel işleme, sıfır-bilgi mimarisi ve blockchain teknolojisi ile maksimum gizlilik",
+    icon: Shield,
+    gradient: "from-blue-600 via-indigo-600 to-purple-600",
     transitionType: "fade",
     features: [
-      "Kitap sayfalarından 3D modeller fırlıyor",
-      "Müzelerde tarihi figürlerle konuşma",
-      "Sokakta yürürken dil öğrenme"
+      "GDPR ve KVKK uyumlu veri koruma",
+      "Edge computing ile yerel işleme",
+      "Blockchain tabanlı erişim kayıtları"
     ]
   },
   {
     id: 7,
     title: "Geleceği Birlikte İnşa Ediyoruz",
-    subtitle: "Eğitim Devrimi Başladı",
-    text: "2045'te her çocuk, potansiyelini tam olarak gerçekleştirebileceği bir eğitim sistemine erişecek",
+    subtitle: "Güvenlik Devrimi Başladı",
+    text: "2045'te her ev, sahiplerini tanıyan, koruyan ve onlara hizmet eden akıllı bir sistem olacak",
     icon: Sparkles,
     gradient: "from-indigo-600 via-purple-600 to-pink-600",
     transitionType: "zoom",
@@ -242,12 +242,12 @@ const Slide: React.FC<SlideProps> = ({ slide }) => {
 
   // Gradient renkleri manuel olarak tanımla
   const gradientStyles: { [key: string]: string } = {
-    "from-cyan-600 via-blue-600 to-purple-700": "linear-gradient(to bottom right, #0891b2, #2563eb, #7c3aed)",
-    "from-purple-600 via-pink-600 to-red-600": "linear-gradient(to bottom right, #9333ea, #db2777, #dc2626)",
-    "from-blue-600 via-cyan-600 to-teal-600": "linear-gradient(to bottom right, #2563eb, #0891b2, #0d9488)",
+    "from-slate-600 via-blue-600 to-indigo-700": "linear-gradient(to bottom right, #475569, #2563eb, #4338ca)",
+    "from-emerald-600 via-teal-600 to-cyan-600": "linear-gradient(to bottom right, #059669, #0d9488, #0891b2)",
+    "from-violet-600 via-purple-600 to-fuchsia-600": "linear-gradient(to bottom right, #7c3aed, #9333ea, #c026d3)",
     "from-orange-600 via-amber-600 to-yellow-600": "linear-gradient(to bottom right, #ea580c, #d97706, #ca8a04)",
     "from-green-600 via-emerald-600 to-teal-600": "linear-gradient(to bottom right, #16a34a, #059669, #0d9488)",
-    "from-pink-600 via-rose-600 to-red-600": "linear-gradient(to bottom right, #db2777, #e11d48, #dc2626)",
+    "from-blue-600 via-indigo-600 to-purple-600": "linear-gradient(to bottom right, #2563eb, #4f46e5, #9333ea)",
     "from-indigo-600 via-purple-600 to-pink-600": "linear-gradient(to bottom right, #4f46e5, #9333ea, #db2777)"
   };
 
@@ -255,7 +255,7 @@ const Slide: React.FC<SlideProps> = ({ slide }) => {
     <div 
       className="slide-container"
       style={{
-        background: gradientStyles[slide.gradient] || gradientStyles["from-cyan-600 via-blue-600 to-purple-700"]
+        background: gradientStyles[slide.gradient] || gradientStyles["from-slate-600 via-blue-600 to-indigo-700"]
       }}
     >
       <div className="slide-background">
@@ -343,8 +343,8 @@ const Slide: React.FC<SlideProps> = ({ slide }) => {
             <div 
               className="cta-button pulse-animation"
             >
-              <Sparkles className="w-8 h-8" />
-              <span>Geleceğe Hazır Mısınız?</span>
+              <Shield className="w-8 h-8" />
+              <span>Güvenliğe Hazır Mısınız?</span>
             </div>
           </div>
         )}
@@ -387,7 +387,7 @@ const StartScreen = ({
           transform: mounted ? 'scale(1) rotate(0)' : 'scale(0) rotate(-180deg)',
           transition: 'all 1s ease-out'
         }}>
-          <Sparkles className="w-32 h-32 text-cyan-400 mx-auto mb-8" />
+          <Key className="w-32 h-32 text-blue-400 mx-auto mb-8" />
         </div>
 
         <h1 
@@ -398,7 +398,7 @@ const StartScreen = ({
             transition: 'all 0.8s ease-out 0.3s'
           }}
         >
-          EĞİTİM 2045
+          EV ANAHTARI 2045
         </h1>
 
         <p 
@@ -408,7 +408,7 @@ const StartScreen = ({
             transition: 'opacity 0.8s ease-out 0.6s' 
           }}
         >
-          Geleceğin Öğrenme Deneyimi
+          Geleceğin Güvenlik Deneyimi
         </p>
         
         <div className="buttons-container">
@@ -491,7 +491,7 @@ const CodeModal: React.FC<CodeModalProps> = ({ isOpen, onClose, fileName }) => {
 
   const codes: { [key: string]: string } = {
     'package.json': `{
-  "name": "education-2045",
+  "name": "ev-anahtari-2045",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
@@ -514,8 +514,8 @@ const CodeModal: React.FC<CodeModalProps> = ({ isOpen, onClose, fileName }) => {
 module.exports = {
   output: 'export',
   images: { unoptimized: true },
-  basePath: '/education-2045',
-  assetPrefix: '/education-2045',
+  basePath: '/ev-anahtari-2045',
+  assetPrefix: '/ev-anahtari-2045',
 }`,
     'tailwind.config.js': `module.exports = {
   content: ['./pages/**/*.{js,jsx,ts,tsx}'],
@@ -536,7 +536,7 @@ html, body {
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }`,
-    'deploy.yml': `name: Deploy to GitHub Pages
+    'deploy.yml': `name: Deploy Ev Anahtarı 2045 to GitHub Pages
 
 on:
   push:
