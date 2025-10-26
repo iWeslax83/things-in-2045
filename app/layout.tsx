@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Eğitim 2045 - Geleceğin Öğrenme Deneyimi",
-  description: "Yapay zeka, sanal gerçeklik ve kişiselleştirilmiş öğrenme ile eğitimde yeni bir çağ başlıyor. 2045'te eğitimin nasıl olacağını keşfedin.",
-  keywords: "eğitim, yapay zeka, sanal gerçeklik, gelecek, öğrenme, teknoloji",
-  authors: [{ name: "Eğitim 2045" }],
+  title: "Ev Anahtarı 2045 - Geleceğin Güvenlik Deneyimi",
+  description: "Biyometrik kimlik doğrulama, çip tabanlı erişim sistemleri ve yapay zeka ile ev güvenliğinde yeni bir çağ başlıyor. 2045'te ev güvenliğinin nasıl olacağını keşfedin.",
+  keywords: "ev anahtarı, biyometrik, çip, güvenlik, yapay zeka, gelecek, teknoloji, erişim sistemi",
+  authors: [{ name: "Ev Anahtarı 2045" }],
   viewport: "width=device-width, initial-scale=1",
 };
 
