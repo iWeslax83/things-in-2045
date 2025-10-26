@@ -1,4 +1,4 @@
-# 🔐 Ev Anahtarı 2045 - Geleceğin Güvenlik Deneyimi
+# 🔐 Things in 2045 - Ev Anahtarı (Future Home Security)
 
 > **Biyometrik kimlik doğrulama, çip tabanlı erişim sistemleri ve yapay zeka ile ev güvenliğinde yeni bir çağ başlıyor.**
 
@@ -62,8 +62,8 @@
 
 1. **Projeyi klonlayın:**
 ```bash
-git clone https://github.com/your-username/ev-anahtari-2045.git
-cd ev-anahtari-2045
+git clone https://github.com/iWeslax83/things-in-2045.git
+cd things-in-2045
 ```
 
 2. **Bağımlılıkları yükleyin:**
@@ -159,7 +159,7 @@ Proje, her slayt için özel gradient renkleri kullanır:
 
 ### Proje Yapısı
 ```
-ev-anahtari-2045/
+things-in-2045/
 ├── app/
 │   ├── globals.css          # Global stiller
 │   ├── layout.tsx           # Ana layout
@@ -245,9 +245,8 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 ## 📞 İletişim
 
-- **GitHub:** [@your-username](https://github.com/your-username)
-- **Email:** your-email@example.com
-- **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/your-profile)
+- **GitHub:** [@iWeslax83](https://github.com/iWeslax83)
+- **Repository:** [things-in-2045](https://github.com/iWeslax83/things-in-2045)
 
 ## 🙏 Teşekkürler
 
