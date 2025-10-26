@@ -437,24 +437,6 @@ const StartScreen = ({
             GitHub
           </button>
         </div>
-
-        <div className="files-grid">
-          {['package.json', 'next.config.js', 'tailwind.config.js', 'styles/globals.css', 'deploy.yml'].map((file, i) => (
-            <button
-              key={file}
-              onClick={() => onShowModal(file)}
-              className="file-button"
-              style={{ 
-                opacity: mounted ? 1 : 0, 
-                transition: `opacity 0.3s ease-out ${1.3 + i * 0.1}s` 
-              }}
-            >
-              <Download className="w-4 h-4 inline mr-2" />
-              {file.split('.')[0]}
-            </button>
-          ))}
-        </div>
-
         <p 
           className="instructions"
           style={{ 
